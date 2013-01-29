@@ -1,0 +1,16 @@
+{
+  "name": "tetris",
+  "repo": "pfraces/tetris",
+  "description": "tetris component for the browser",
+  "version": "0.2.0",
+  "dependencies": {
+    "pfraces/gen": "*"
+  },
+  "scripts": [
+    "index.js"
+  ],
+  "keywords": [
+    "tetris"
+  ],
+  "license": "MIT"
+}

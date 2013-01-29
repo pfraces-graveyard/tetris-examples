@@ -1,0 +1,7 @@
+{
+  "name": "tetris-examples",
+  "dependencies": {
+    "pfraces/tetris": "*"
+  },
+  "scripts": ["index.js"]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "jsl",
+  "repo": "pfraces/jsl",
+  "description": "general-purpose javascript library",
+  "version": "0.2.2",
+  "keywords": [
+    "general-purpose"
+  ],
+  "scripts": [
+    "index.js"
+  ],
+  "license": "MIT"
+}
