@@ -1,0 +1,15 @@
+{
+  "name": "sel-style",
+  "repo": "bojs/sel-style",
+  "description": "dynamic style for dom nodes",
+  "version": "0.2.1",
+  "dependencies": {},
+  "scripts": [
+    "index.js"
+  ],
+  "keywords": [
+    "style",
+    "css"
+  ],
+  "license": "MIT"
+}

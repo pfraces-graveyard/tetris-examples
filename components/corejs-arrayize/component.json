@@ -1,0 +1,14 @@
+{
+  "name": "arrayize",
+  "repo": "corejs/arrayize",
+  "description": "convert an object to array",
+  "version": "0.1.0",
+  "dependencies": {},
+  "scripts": [
+    "index.js"
+  ],
+  "keywords": [
+    "array"
+  ],
+  "license": "MIT"
+}

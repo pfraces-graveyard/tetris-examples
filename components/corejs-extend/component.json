@@ -1,0 +1,20 @@
+{
+  "name": "extend",
+  "repo": "corejs/extend",
+  "description": "prototypal inheritance abstraction",
+  "version": "0.2.3",
+  "dependencies": {
+    "corejs/arrayize": "*",
+    "corejs/dictionary": "*"
+  },
+  "scripts": [
+    "index.js"
+  ],
+  "keywords": [
+    "prototypal",
+    "inheritance",
+    "class",
+    "oop"
+  ],
+  "license": "MIT"
+}

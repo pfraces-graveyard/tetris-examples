@@ -1,0 +1,19 @@
+{
+  "name": "gen",
+  "repo": "pfraces/gen",
+  "description": "game engine",
+  "version": "0.4.2",
+  "dependencies": {
+    "bojs/shortcut": "*",
+    "genjs/actor": "*",
+    "genjs/render": "*"
+  },
+  "scripts": [
+    "index.js"
+  ],
+  "keywords": [
+    "game",
+    "engine"
+  ],
+  "license": "MIT"
+}

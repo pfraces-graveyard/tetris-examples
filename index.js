@@ -1,22 +1,16 @@
-var tetris = require('tetris')({
-  board: {
-    id: 'board',
-    width: 10,
-    height: 17,
-    cell: { color: '' }
-  },
-  cell: {
-    width: 3,
-    height: 3,
-    unit: 'em'
-  }
+var tetris = require('tetris');
+
+var game = tetris({
+  id: 'board', /* canvas */
+  width: 10, /* cells */
+  height: 17, /* cells */
+  cell: 50, /* pixels */
+  bg: 'lightblue'
 });
 
-tetris.keymap({
-  '8': tetris.up,
-  '5': tetris.down,
-  '4': tetris.left,
-  '6': tetris.right
+game.keymap({
+  'up': game.up,
+  'down': game.down,
+  'left': game.left,
+  'right': game.right
 });
-
-tetris.start();

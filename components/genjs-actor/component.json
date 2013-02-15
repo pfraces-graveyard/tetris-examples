@@ -1,0 +1,17 @@
+{
+  "name": "actor",
+  "repo": "genjs/actor",
+  "description": "treat several DOM nodes as a whole",
+  "version": "0.1.3",
+  "dependencies": {
+    "corejs/arrayize": "*"
+  },
+  "scripts": [
+    "index.js"
+  ],
+  "keywords": [
+    "actor",
+    "entity"
+  ],
+  "license": "MIT"
+}

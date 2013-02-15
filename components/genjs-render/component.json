@@ -1,0 +1,17 @@
+{
+  "name": "render",
+  "repo": "genjs/render",
+  "description": "render",
+  "version": "0.1.5",
+  "dependencies": {
+    "bojs/sel": "*",
+    "bojs/sel-style": "*"
+  },
+  "scripts": [
+    "index.js"
+  ],
+  "keywords": [
+    "render"
+  ],
+  "license": "MIT"
+}

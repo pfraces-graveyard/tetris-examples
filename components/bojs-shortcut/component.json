@@ -1,0 +1,17 @@
+{
+  "name": "shortcut",
+  "repo": "bojs/shortcut",
+  "description": "keyboard shortcuts emitter",
+  "version": "0.4.3",
+  "dependencies": {
+    "corejs/dictionary": "*"
+  },
+  "scripts": [
+    "index.js"
+  ],
+  "keywords": [
+    "keyboard",
+    "shortcuts"
+  ],
+  "license": "MIT"
+}

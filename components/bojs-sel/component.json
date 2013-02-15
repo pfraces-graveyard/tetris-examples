@@ -1,0 +1,19 @@
+{
+  "name": "sel",
+  "repo": "bojs/sel",
+  "description": "dom selector",
+  "version": "0.5.10",
+  "dependencies": {
+    "corejs/arrayize": "*",
+    "corejs/dictionary": "*",
+    "corejs/extend": "*"
+  },
+  "scripts": [
+    "index.js"
+  ],
+  "keywords": [
+    "dom",
+    "selector"
+  ],
+  "license": "MIT"
+}
