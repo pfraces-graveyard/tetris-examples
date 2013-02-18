@@ -1,0 +1,15 @@
+{
+  "name": "job",
+  "repo": "corejs/job",
+  "description": "functional break",
+  "version": "0.2.1",
+  "dependencies": {},
+  "scripts": [
+    "index.js"
+  ],
+  "keywords": [
+    "functional",
+    "break"
+  ],
+  "license": "MIT"
+}

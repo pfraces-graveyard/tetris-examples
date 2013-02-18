@@ -1,0 +1,15 @@
+{
+  "name": "uid",
+  "repo": "corejs/uid",
+  "description": "unique identifiers generator",
+  "version": "0.1.0",
+  "dependencies": {},
+  "scripts": [
+    "index.js"
+  ],
+  "keywords": [
+    "unique",
+    "identifiers"
+  ],
+  "license": "MIT"
+}
