@@ -2,7 +2,7 @@
   "name": "sel-style",
   "repo": "bojs/sel-style",
   "description": "dynamic style for dom nodes",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "dependencies": {},
   "scripts": [
     "index.js"

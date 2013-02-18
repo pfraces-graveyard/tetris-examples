@@ -2,9 +2,10 @@
   "name": "shortcut",
   "repo": "bojs/shortcut",
   "description": "keyboard shortcuts emitter",
-  "version": "0.4.3",
+  "version": "0.5.4",
   "dependencies": {
-    "corejs/dictionary": "*"
+    "corejs/dictionary": "*",
+    "corejs/type": "*"
   },
   "scripts": [
     "index.js"

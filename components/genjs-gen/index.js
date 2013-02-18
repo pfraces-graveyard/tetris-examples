@@ -1,23 +1,40 @@
-var shortcut = require('shortcut'),
+var extend = require('extend'),
     actor = require('actor'),
     render = require('render');
     
 
-var gen = module.exports = function (config) {
+module.exports = function (config) {
   return new Gen(config);
 };
 
 var Gen = function (config) {
-  this.render = render(config);
+  var self = this;
   this.actors = [];
+  this.render = render(extend(config, {
+    frame: function () {
+      frame(config.cell, self.actors);
+    }
+  }));
 };
 
-Gen.prototype.keymap = function (keymap) {
-  Object.keys(keymap).forEach(function (key) {
-    shortcut.on(key, keymap[key]);
+Gen.prototype.actor = function (pos) {
+  var a = actor(pos, [{
+    tile: this.render.tile(),
+    x: 0,
+    y: 0
+  }]);
+  this.actors.push(a);
+  return a;
+};
+
+var frame = function (cell, actors) {
+  actors.forEach(function (actor) {
+    actor.act();
   });
-};
 
-Gen.prototype.actor = function (pos, members) {
-  this.actors.push(actor(pos, members));
-};
+  actors.forEach(function (actor) {
+    actor.members.forEach(function (member) {
+      member.tile.move(actor.x + member.x, actor.y + member.y)
+    });
+  });
+}

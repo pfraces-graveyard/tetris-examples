@@ -1,30 +1,56 @@
-var gen = require('gen');
+var gen = require('gen'),
+    shortcut = require('shortcut');
 
-var tetris = module.exports = function (config) {
+module.exports = function (config) {
   return new Tetris(config);
 };
 
 var Tetris = function (config) {
   this.engine = gen(config);
   this.player = this.engine.actor({ x: 0, y: 0 });
+
+  var player = this.player;
+
+  this.up = function (enable) {
+    if (enable) {
+      player.actions.set('up', player.move.up);
+    } else {
+      player.actions.del('up');
+    }
+  };
+
+  this.down = function (enable) {
+    if (enable) {
+      player.actions.set('down', player.move.down);
+    } else {
+      player.actions.del('down');
+    }
+  };
+
+  this.left = function (enable) {
+    if (enable) {
+      player.actions.set('left', player.move.left);
+    } else {
+      player.actions.del('left');
+    }
+  };
+
+  this.right = function (enable) {
+    if (enable) {
+      player.actions.set('right', player.move.right);
+    } else {
+      player.actions.del('right');
+    }
+  };
 };
 
 Tetris.prototype.keymap = function (keymap) {
-  this.engine.keymap(keymap);
-};
-
-Tetris.prototype.up = function () {
-  this.player.move.up();
-};
-
-Tetris.prototype.down = function () {
-  this.player.move.down();
-};
-
-Tetris.prototype.left = function () {
-  this.player.move.left();
-};
-
-Tetris.prototype.right = function () {
-  this.player.move.right();
+  Object.keys(keymap).forEach(function (key) {
+    shortcut.on(key, function () {
+      keymap[key](true);
+    });
+    shortcut.onEnd(key, function () {
+      keymap[key]();
+    });
+  });
 };

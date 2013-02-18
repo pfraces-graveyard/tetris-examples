@@ -1,24 +1,22 @@
-var arrayize = require('arrayize');
+var arrayize = require('arrayize'),
+    dictionary = require('dictionary');
 
-var actor = module.exports = function (pos, members) {
+module.exports = function (pos, members) {
   return new Actor(pos, members);
 };
 
 var Actor = function (pos, members) {
   var self = this;
-  self.x = pos.x;
-  self.y = pos.y;
-  self.last = {
-    x: pos.x,
-    y: pos.y
-  };
+  this.x = pos.x;
+  this.y = pos.y;
+  this.actions = dictionary();
 
-  self.members = [];
+  this.members = [];
   arrayize(members).forEach(function (member) {
     addMember(self, member);
   });
 
-  self.move = {
+  this.move = {
     to: function (pos) {
       moveActor(self, pos);
     },
@@ -42,17 +40,21 @@ Actor.prototype.add = function (member) {
   return this;
 };
 
+Actor.prototype.act = function () {
+  this.actions.each(function (action) {
+    action();
+  });
+};
+
 var addMember = function (actor, member) {
   actor.members.push({
-    el: member.el,
+    tile: member.tile,
     x: member.x,
     y: member.y
   });
 };
 
 var moveActor = function (actor, pos) {
-  actor.last.x = actor.x;
-  actor.last.y = actor.y;
   actor.x = pos.x;
   actor.y = pos.y;
 };

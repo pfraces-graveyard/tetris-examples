@@ -2,9 +2,10 @@
   "name": "actor",
   "repo": "genjs/actor",
   "description": "treat several DOM nodes as a whole",
-  "version": "0.1.3",
+  "version": "0.4.0",
   "dependencies": {
-    "corejs/arrayize": "*"
+    "corejs/arrayize": "*",
+    "corejs/dictionary": "*"
   },
   "scripts": [
     "index.js"

@@ -10,8 +10,15 @@ var Sel = function (selector) {
   this.nodes = arrayize(select(parse(selector)));
 };
 
+Sel.prototype.first = function () {
+  return this.nodes[0];
+};
+
+Sel.prototype.last = function () {
+  return this.nodes[this.nodes.length - 1];
+};
+
 sel.plugin = function () {
-  var self = this;
   arrayize(arguments).forEach(function (plugin) {
     dictionary(plugin).each(function (fn, name) {
       Sel.prototype[name] = function (args) {
@@ -23,6 +30,15 @@ sel.plugin = function () {
     });
   });
   return this;
+};
+
+sel.div = function (id) {
+  var s = sel(),
+      d = document.createElement('div');
+
+  d.id = id;
+  s.nodes = [d];
+  return s;
 };
 
 var parse = function (selector) {

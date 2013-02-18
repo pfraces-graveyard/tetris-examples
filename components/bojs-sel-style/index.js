@@ -4,10 +4,6 @@ var style = module.exports = {
     node.style.position = 'absolute';
     node.style.left = args.x; 
     node.style.top = args.y;
-
-    if (args.relative) {
-      node.parentNode.style.position = 'relative';
-    }
   },
   size: function (args) {
     var node = args.node;

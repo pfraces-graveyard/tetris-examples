@@ -2,8 +2,9 @@
   "name": "tetris",
   "repo": "pfraces/tetris",
   "description": "tetris component for the browser",
-  "version": "0.3.3",
+  "version": "0.4.1",
   "dependencies": {
+    "bojs/shortcut": "*",
     "genjs/gen": "*"
   },
   "scripts": [

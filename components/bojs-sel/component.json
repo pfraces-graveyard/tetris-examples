@@ -2,7 +2,7 @@
   "name": "sel",
   "repo": "bojs/sel",
   "description": "dom selector",
-  "version": "0.5.10",
+  "version": "0.7.0",
   "dependencies": {
     "corejs/arrayize": "*",
     "corejs/dictionary": "*",
