@@ -2,7 +2,7 @@
   "name": "type",
   "repo": "corejs/type",
   "description": "type detection",
-  "version": "0.2.0",
+  "version": "0.3.3",
   "dependencies": {},
   "scripts": [
     "index.js"

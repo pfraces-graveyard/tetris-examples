@@ -1,5 +1,3 @@
-var type = require('type');
-
 var arrange = module.exports = {
   move: function (args) {
     var node = args.to.first();

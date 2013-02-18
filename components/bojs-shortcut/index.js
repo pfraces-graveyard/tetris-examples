@@ -1,5 +1,4 @@
-var dictionary = require('dictionary')
-    type = require('type');
+var dictionary = require('dictionary');
 
 var Shortcut = function () {
   this.endHandlers = dictionary();
